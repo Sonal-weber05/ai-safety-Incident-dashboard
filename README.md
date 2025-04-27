@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+# this project in my new brach(not in main branch) so to open this project, just select the "my new branch" option from branches menu.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
