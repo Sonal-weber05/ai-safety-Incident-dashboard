@@ -1,0 +1,84 @@
+/* Fade animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide animations */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Component-specific animations */
+  .incident-form-container {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .incident-item {
+    animation: fadeInUp 0.4s ease-out;
+  }
+  
+  .incident-item:nth-child(odd) {
+    animation-delay: 0.05s;
+  }
+  
+  .incident-item:nth-child(even) {
+    animation-delay: 0.1s;
+  }
+  
+  /* Hover animations */
+  .btn-primary:hover, .btn-secondary:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(74, 111, 165, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(74, 111, 165, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(74, 111, 165, 0);
+    }
+  }
+  
+  /* Severity indicator pulse */
+  .severity-indicator {
+    animation: pulse 2s infinite;
+  }
+  
+  .severity-low .severity-indicator {
+    animation: pulse 2s infinite;
+  }
+  
+  .severity-medium .severity-indicator {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .severity-high .severity-indicator {
+    animation: pulse 1s infinite;
+  }
+  
+  /* Toggle form animation */
+  .incident-form-container.visible {
+    animation: fadeInUp 0.4s ease-out;
+  }
